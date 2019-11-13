@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">      
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Student Timetable List</title>
+</h:head>
+<body>
+	<h2>Time Table List</h2>
+	<h:form>
+	<!-- <p:dataTable value = "#{timetablecontroller.timetablelist}" var = "timetable"> -->
+	<ui:repeat var="timetable" value="#{timetablecontroller.timetablelist}">	
+	<p:column headerText = "Student No">
+	<h:outputText value = "#{timetable.studentNos}"/>
+	</p:column>
+	<p:column headerText = "Student No">
+	<h:outputText value = "#{timetable.studentNames}"/>
+	</p:column>
+	<p:column headerText = "Student No">
+	<h:outputText value = "#{timetable.subjectNames}"/>
+	</p:column>
+	<p:column headerText = "Student No">
+	<h:outputText value = "#{timetable.examDates}"/>
+	</p:column>
+	</ui:repeat>
+	
+	<!-- </p:dataTable> -->
+
+	</h:form>
+</body>
+</html>

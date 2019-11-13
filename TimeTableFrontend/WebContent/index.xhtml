@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Student Timetable Management</title>
+</h:head>
+<body>
+	<h2>Time Table</h2>
+	<h:form>
+	<h:panelGrid id="panel" columns = "2" cellspacing = "1" cellpadding = "1">
+		<h:outputText value = "Student Number"/>
+		<h:inputText value = "#{timetablecontroller.timetable.studentNos}"/>
+		<h:outputText value = "Student Name"/>
+		<h:inputText value = "#{timetablecontroller.timetable.studentNames}"/>
+		<h:outputText value = "Subject Name"/>
+		<h:inputText value = "#{timetablecontroller.timetable.subjectNames}"/>
+		<h:outputText value = "Exam Date"/>
+		<h:inputText value = "#{timetablecontroller.timetable.examDates}">
+		<f:convertDateTime pattern = "dd/mm/yyyy"/>
+		</h:inputText>
+	</h:panelGrid>
+	<h:commandButton value="Save" action="#{timetablecontroller.addNewStudents}"></h:commandButton>
+	<h:commandButton value="View" action="#{timetablecontroller.DisplayInfo}"></h:commandButton>
+	</h:form>
+</body>
+</html>
